@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+        <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="  crossorigin=""></script>
+    <link rel="stylesheet" href="css/tag-map.css">
+
+    <!-- UI -->
+    <script src="js/tag-map.js"></script>
+</head>
+      <body onload="init();">
+        
+      <div class="container-fluid text-center">    
+        <div class="row content">
+          <div class="col-sm-2 sidenav">
+            @* <p><a href="#">Link</a></p>
+            <p><a href="#">Link</a></p>
+            <p><a href="#">Link</a></p> *@
+          </div>
+          <div class="col-sm-8 text-left"> 
+            <h1>MapTag</h1>
+            <p>An experimental platform where you can tag points of interest on the map with your own message. Share updates, memoirs or vandalise the map for others to see.</p>
+            <hr>
+            <h3>Click me!</h3>
+            <p>Click anywhere on the map to add your own tag</p>
+            <div id="map" ></div>
+
+            
+          </div>
+          <div class="col-sm-2 sidenav" id="recent-tags">
+            <div class="well">
+              @* <p>ADS</p> *@
+            </div>
+            <div class="well">
+              @* <p>ADS</p> *@
+            </div>
+          </div>
+        </div>
+      </div>
+      </body>
