@@ -5,6 +5,6 @@ An experimental platform where you can tag points of interest on the map with yo
 ## To Run
 
 ```
-   dotnet ef database update
-   dotnet run
+dotnet ef database update
+dotnet run
 ```
