@@ -8,7 +8,6 @@ class TagMap
       this.initialLongitude = -0.09;
       this.mapImage = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
       this.map = this.initMap();
-      // this.setExampleMarker();
       this.getMarkers();
    }
 
@@ -59,19 +58,11 @@ class TagMap
       return ++(this.lastID);
    }
 
-   // setMarkers(markers)
-   // {
-   //    markers.forEach(m => {
-   //       this.setMarker(m.id, m.latitude, m.longitude, m.message);
-   //    });
-   // }
-
    getMarkers()
    {
       fetch('/api/v1/TagGetMarkers').then(response =>{
          return response.json();
       }).then(data =>{
-         // this.setMarkers(data);
          data.forEach(m => {
             this.setMarker(m.id, m.latitude, m.longitude, m.message);
          });
@@ -82,25 +73,18 @@ class TagMap
    {
       let response = await fetch('/api/v1/TagCreateMarker', {
                headers: { "Content-Type": "application/json; charset=utf-8; " },
-               // headers: { "Content-Type": "x-www-form-urlencoded; charset=utf-8" },
                method: 'POST',
                body: JSON.stringify({
-                     // Id: 20199,
                      Latitude: parseInt(latitude),
                      Longitude: parseInt(longitude),
                      Message: message
                })
          })
       
-      
-      // let data = await response.json();
       let data = await response.text();
       console.log(data);
-      // console.log(JSON.parse(data));
-      // let parsedData = JSON.parse(data);
 
       return JSON.parse(data);
-      // return {id: -1};
    
    }
 
@@ -110,5 +94,4 @@ var tm = {};
 function init()
 {
    tm = new TagMap("map");
-   // tm.map.layerGroup.clearLayers();
 }
