@@ -82,7 +82,7 @@ class TagMap
          })
       
       let data = await response.text();
-      console.log(data);
+      // console.log(data);
 
       return JSON.parse(data);
    
