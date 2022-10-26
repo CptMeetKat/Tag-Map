@@ -13,3 +13,6 @@ dotnet run
 ## Example
 
 ![Map showing markers](/media/Example.png?raw=true)
+
+
+![alt text](https://github.com/CptMeetKat/Tag-Map/blob/media/Example.png)
