@@ -12,4 +12,4 @@ dotnet run
 
 ## Example
 
-![Map showing markers](../media/Example.png?raw=true)
+![Map showing markers](/media/Example.png?raw=true)
