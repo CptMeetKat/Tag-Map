@@ -3,7 +3,7 @@ class TagMap
    constructor(htmlID) {
       this.lastID = 0;
       this.htmlID = htmlID;
-      this.maxZoom = 13;
+      this.maxZoom = 20;
       this.initialLatitude = 51.505;
       this.initialLongitude = -0.09;
       this.mapImage = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
