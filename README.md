@@ -8,3 +8,8 @@ An experimental platform where you can tag points of interest on the map with yo
 dotnet ef database update
 dotnet run
 ```
+
+
+## Example
+
+![Map showing markers](../media/Example.png?raw=true)
