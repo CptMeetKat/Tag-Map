@@ -94,7 +94,7 @@ class TagMap
       // var markerBounds = L.latLngBounds(bounds);
       // this.map.fitBounds(bounds);
 
-      let tempBounds = [[1,2], [2,2]]
+      let tempBounds = [[1,2], [2,2]] // 2 coordinates because idk
 
       this.map.fitBounds(tempBounds);
 
