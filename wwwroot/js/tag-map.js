@@ -65,6 +65,7 @@ class TagMap
       }).then(data =>{
          data.forEach(m => {
             this.setMarker(m.id, m.latitude, m.longitude, m.message);
+            addElt(m.id, m.message)
          });
       })
    }
@@ -88,10 +89,43 @@ class TagMap
    
    }
 
+   centerLeafletMapOnMarker(bounds) {
+      // var bounds = new L.LatLngBounds(   [50, 50] );
+      // var markerBounds = L.latLngBounds(bounds);
+      // this.map.fitBounds(bounds);
+
+      let tempBounds = [[1,2], [2,2]]
+
+      this.map.fitBounds(tempBounds);
+
+
+      // this.map.fitBounds([[1,1],[2,2],[3,3]]);
+    }
+
 }
 
 var tm = {};
 function init()
 {
    tm = new TagMap("map");
+}
+
+
+function addElt(id, body)
+{
+   console.log("Adding elt");
+   var newUL = document.getElementById("featured_pins");
+   var newListItem = document.createElement("li");
+   newListItem.innerText = id + " " + body;
+   newListItem.className = "list-group-item featured_card";
+
+
+   newListItem.addEventListener("click", function(e) {
+      alert('Clicked on featured marker');
+  }, false);
+
+   newUL.appendChild(newListItem); 
+
+   tm.centerLeafletMapOnMarker();
+
 }

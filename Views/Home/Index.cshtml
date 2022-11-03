@@ -15,7 +15,10 @@
         
       <div class="container-fluid text-center">    
         <div class="row content">
+
+
           <div class="col-sm-2 sidenav">
+            <button onclick="addElt(1, 'Test')"> test </button>
             @* <p><a href="#">Link</a></p>
             <p><a href="#">Link</a></p>
             <p><a href="#">Link</a></p> *@
@@ -26,17 +29,46 @@
             <hr>
             <h3>Click me!</h3>
             <p>Click anywhere on the map to add your own tag</p>
-            <div id="map" ></div>
-
-            
+            @* <div id="map" ></div>             *@
           </div>
-          <div class="col-sm-2 sidenav" id="recent-tags">
+
+
+          <div class="col-sm-2 sidenav">
+            
+            @* <div class="well" style="height:100px">
+            </div> *@
+
+          </div>
+        </div>
+
+        <div class="row content">
+
+
+          <div class="col-sm-2 sidenav">
+          </div>
+          <div class="col-sm-8 text-left"> 
+
+            <div id="map" ></div>            
+          </div>
+
+
+          <div class="col-sm-2 sidenav" id="recent-tags">          
             <div class="well">
-              @* <p>ADS</p> *@
+              <div class="card">
+                <div class="card-header">
+                  Featured
+                </div>
+                <ul class="list-group list-group-flush" id="featured_pins">
+                  @* <li class="list-group-item featured_card">An item</li> *@
+                  @* <li class="list-group-item featured_card">A second item</li> *@
+                  @* <li class="list-group-item featured_card">A third item</li> *@
+                </ul>
+              </div>
             </div>
-            <div class="well">
-              @* <p>ADS</p> *@
-            </div>
+
+
+
+
           </div>
         </div>
       </div>
